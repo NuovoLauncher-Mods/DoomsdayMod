@@ -1,0 +1,43 @@
+itemGroup.DoomsdayArmor=Doomsday Armor
+itemGroup.DoomsdayBunkerStuff=Doomsday Bunker Blocks
+itemGroup.DoomsdayModFood=Doomsday Food
+itemGroup.DoomsdayModItems=Doomsday Items
+itemGroup.DoomsdayModOres=Doomsday Ores
+itemGroup.DoomsdayModSeeds=Doomsday Seeds
+itemGroup.DoomsdayModTools=Doosday Tools
+
+item.doomsday_mod_rad_helm.name=Irradiated Helmet
+item.doomsday_mod_rad_chest.name=Irradiated Chest
+item.doomsday_mod_rad_leggings.name=Irradiated Leggings
+item.doomsday_mod_rad_boots.name=Irradiated Boots
+item.doomsday_mod_rad_steel.name=Irradiated Steel
+
+tile.doomsday_mod_bunker_roof.name=Bunker Roof
+tile.doomsday_mod_bunker_walls.name=Bunker Walls
+tile.doomsday_mod_bunker_floor.name=Bunker Floor
+item.doomsday_mod_bunker_sign.name=Bunker Sign
+
+item.doomsday_mod_canned_corn.name=Canned Corn
+item.doomsday_mod_canned_beans.name=Canned Beans
+item.doomsday_mod_corn_bread.name=Corn Bread
+item.doomsday_mod_steel_can.name=Can
+item.doomsday_mod_popcorn.name=Popcorn
+item.doomsday_mod_corn.name=Corn
+item.doomsday_mod_beans.name=Beans
+
+item.doomsday_mod_steel.name=Steel
+item.doomsday_mod_rad_steel.name=Radiation Steel
+
+tile.doomsday_mod_rad_steel_ore.name=Irradated Steel Ore
+tile.doomsday_mod_steel_ore.name=Steel Ore
+
+item.doomsday_mod_bean_seeds.name=Beans
+item.doomsday_mod_corn_seed.name=Corn
+
+item.doomsday_mod_doom_pickaxe.name=Doom Pickaxe
+
+item.doomsday_mod_corns.name=Corn
+item.doomsday_mod_bean.name=Beans
+
+tile.doomsday_mod_beans.name=Bean Plant
+tile.doomsday_mod_corn.name=Corn Plant

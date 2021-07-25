@@ -1,0 +1,16 @@
+[
+{
+  "modid": "doomsday_mod",
+  "name": "Dooms Day Mod",
+  "description": "Dooms day is comming. Are you ready?",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["WeclomeToBASH"],
+  "credits": "Louie for the code, and Casiegh for his wonderful skills in art and sound",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
