@@ -4,7 +4,7 @@ package com.haxium.basicmod.doomsday.items;
 
 import net.minecraft.item.Item;
 
-import com.basicmod.haxium.doomsday.DoomsdayMod;
+import com.haxium.basicmod.doomsday.DoomsdayMod;
 
 public class ItemDoomsdayModGeneric extends Item {
   public ItemDoomsdayModGeneric(String name) {

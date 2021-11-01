@@ -6,7 +6,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
-import com.basicmod.haxium.doomsday.DoomsdayMod;
+import com.haxium.basicmod.doomsday.DoomsdayMod;
 
 public class tabOres extends CreativeTabs {
   public tabOres() {

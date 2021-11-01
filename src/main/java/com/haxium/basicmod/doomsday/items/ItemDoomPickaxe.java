@@ -5,7 +5,7 @@ package com.haxium.basicmod.doomsday.items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPickaxe;
 
-import com.basicmod.haxium.doomsday.DoomsdayMod;
+import com.haxium.basicmod.doomsday.DoomsdayMod;
 
 public class ItemDoomPickaxe extends ItemPickaxe {
   public ItemDoomPickaxe(Item.ToolMaterial material, String name) {

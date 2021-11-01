@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.IPlantable;
 
-import com.basicmod.haxium.doomsday.DoomsdayMod;
+import com.haxium.basicmod.doomsday.DoomsdayMod;
 
 public class ItemBeanSeed extends Item implements IPlantable {
   private Block plant;

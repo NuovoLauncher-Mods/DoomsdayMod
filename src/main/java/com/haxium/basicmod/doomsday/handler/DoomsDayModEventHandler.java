@@ -10,7 +10,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 
-import com.basicmod.haxium.doomsday.DoomsdayMod;
+import com.haxium.basicmod.doomsday.DoomsdayMod;
 
 public class DoomsDayModEventHandler implements IWorldGenerator {
   public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {

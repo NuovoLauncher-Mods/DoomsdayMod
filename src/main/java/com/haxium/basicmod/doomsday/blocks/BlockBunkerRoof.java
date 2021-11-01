@@ -5,7 +5,7 @@ package com.haxium.basicmod.doomsday.blocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-import com.basicmod.haxium.doomsday.DoomsdayMod;
+import com.haxium.basicmod.doomsday.DoomsdayMod;
 
 public class BlockBunkerRoof extends Block {
   String name = "bunker_roof";

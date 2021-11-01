@@ -9,7 +9,8 @@ import java.util.Random;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 
-import com.basicmod.haxium.doomsday.DoomsdayMod;
+import com.haxium.basicmod.doomsday.DoomsdayMod;
+
 
 public class BlockBeans extends RecipeBlockCrops {
   public BlockBeans() {

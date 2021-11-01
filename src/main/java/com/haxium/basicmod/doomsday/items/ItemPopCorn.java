@@ -4,7 +4,7 @@ package com.haxium.basicmod.doomsday.items;
 
 import net.minecraft.item.ItemFood;
 
-import com.basicmod.haxium.doomsday.DoomsdayMod;
+import com.haxium.basicmod.doomsday.DoomsdayMod;
 
 public class ItemPopCorn extends ItemFood {
   public ItemPopCorn(int food, float saturation, boolean wolfFood) {

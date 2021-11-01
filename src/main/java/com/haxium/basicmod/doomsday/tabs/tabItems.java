@@ -5,7 +5,7 @@ package com.haxium.basicmod.doomsday.tabs;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-import com.basicmod.haxium.doomsday.DoomsdayMod;
+import com.haxium.basicmod.doomsday.DoomsdayMod;
 
 public class tabItems extends CreativeTabs {
   public tabItems() {
