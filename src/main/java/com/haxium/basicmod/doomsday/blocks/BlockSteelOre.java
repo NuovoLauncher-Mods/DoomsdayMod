@@ -1,14 +1,16 @@
 //Deobfuscated with https://github.com/PetoPetko/Minecraft-Deobfuscator3000 using mappings "1.7.10 stable mappings"!
 
-package com.haxium.basicmod.doomsday;
+package com.haxium.basicmod.doomsday.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class BlockRadSteelOre extends Block {
-  String name = "rad_steel_ore";
+import com.basicmod.haxium.doomsday.DoomsdayMod;
+
+public class BlockSteelOre extends Block {
+  String name = "steel_ore";
   
-  public BlockRadSteelOre() {
+  public BlockSteelOre() {
     super(Material.rock);
     setBlockName("doomsday_mod_" + this.name);
     setBlockTextureName("doomsday_mod:" + this.name);

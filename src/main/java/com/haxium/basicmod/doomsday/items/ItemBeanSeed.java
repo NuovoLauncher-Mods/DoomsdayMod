@@ -1,6 +1,6 @@
 //Deobfuscated with https://github.com/PetoPetko/Minecraft-Deobfuscator3000 using mappings "1.7.10 stable mappings"!
 
-package com.haxium.basicmod.doomsday;
+package com.haxium.basicmod.doomsday.items;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
@@ -11,6 +11,8 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.IPlantable;
+
+import com.basicmod.haxium.doomsday.DoomsdayMod;
 
 public class ItemBeanSeed extends Item implements IPlantable {
   private Block plant;

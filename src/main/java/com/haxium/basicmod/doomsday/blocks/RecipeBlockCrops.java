@@ -1,6 +1,6 @@
 //Deobfuscated with https://github.com/PetoPetko/Minecraft-Deobfuscator3000 using mappings "1.7.10 stable mappings"!
 
-package com.haxium.basicmod.doomsday;
+package com.haxium.basicmod.doomsday.blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -14,6 +14,8 @@ import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+
+import com.basicmod.haxium.doomsday.DoomsdayMod;
 
 public class RecipeBlockCrops extends BlockBush implements IGrowable {
   protected int maxGrowthStage = 7;

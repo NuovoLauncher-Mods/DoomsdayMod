@@ -7,14 +7,25 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
+
 import net.minecraft.block.Block;
+
 import net.minecraft.creativetab.CreativeTabs;
+
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
+
+//import all the base classes
+import com.haxium.basicmod.doomsday.blocks.*;
+import com.haxium.basicmod.doomsday.effects.*;
+import com.haxium.basicmod.doomsday.handler.*;
+import com.haxium.basicmod.doomsday.items.*;
+import com.haxium.basicmod.doomsday.tabs.*;
 
 @Mod(modid = "doomsday_mod", version = "1.0Alpha", name = "Doomsday Mod")
 public class DoomsdayMod {

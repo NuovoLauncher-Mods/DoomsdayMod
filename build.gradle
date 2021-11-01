@@ -9,9 +9,10 @@ if (project.hasProperty("projVersion")) {
 buildscript {
     repositories {
         mavenCentral()
+        maven { url = "https://jcenter.bintray.com/" }
         maven {
             name = "forge"
-            url = "http://files.minecraftforge.net/maven"
+            url = "https://files.minecraftforge.net/maven"
         }
         maven {
             name = "sonatype"
@@ -19,14 +20,16 @@ buildscript {
         }
     }
     dependencies {
-        classpath "net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT"
+        classpath ('com.anatawa12.forge:ForgeGradle:1.2-1.0.+') {
+            changing = true
+        }
     }
 }
 
 apply plugin: "forge"
 
-group= "com.haxium.basicmod.doomsday" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "doomsday_mod"
+group= "com.haxium.basicmod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "obsidian_armor"
 
 minecraft {
     version = "1.7.10-10.13.4.1614-1.7.10"
@@ -71,9 +74,34 @@ processResources
 
 //Custom tasks
 
+
 task copy(dependsOn: build, type: Copy) {
      from "build/libs"
      into System.getProperty('user.home') + "/.minecraft/mods"
-     include "doomsday_mod-$project.version*"
-
+     include "obsidian_armor-$project.version*"
 }
+
+task copy_test(dependsOn: build, type: Copy) {
+    from "build/libs"
+    into System.getProperty('user.home') + "/Desktop/Minecraft Testing/mods"
+    include "obsidian_armor-$project.version*"
+}
+
+task copy_release(type: Copy) {
+    from "build/libs"
+    into System.getProperty('user.home') + "/Desktop/Programming/Java/ObsidianArmor-Releases"
+    include "obsidian_armor-$project.version*"
+}
+
+task update_release(type: Exec) {
+    def update_command = ['update-release', '--obsidian', project.version]
+    commandLine update_command
+}
+
+//Copy the release and push to github
+
+copy_release.mustRunAfter copy 
+copy.finalizedBy copy_release
+
+update_release.mustRunAfter copy_release
+copy_release.finalizedBy update_release

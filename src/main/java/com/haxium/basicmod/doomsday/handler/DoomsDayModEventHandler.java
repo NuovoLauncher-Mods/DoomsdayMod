@@ -1,6 +1,6 @@
 //Deobfuscated with https://github.com/PetoPetko/Minecraft-Deobfuscator3000 using mappings "1.7.10 stable mappings"!
 
-package com.haxium.basicmod.doomsday;
+package com.haxium.basicmod.doomsday.handler;
 
 import cpw.mods.fml.common.IWorldGenerator;
 import java.util.Random;
@@ -9,6 +9,8 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
+
+import com.basicmod.haxium.doomsday.DoomsdayMod;
 
 public class DoomsDayModEventHandler implements IWorldGenerator {
   public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
