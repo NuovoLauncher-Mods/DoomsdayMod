@@ -22,7 +22,6 @@ import net.minecraftforge.oredict.OreDictionary;
 
 //import all the base classes
 import com.haxium.basicmod.doomsday.blocks.*;
-import com.haxium.basicmod.doomsday.effects.*;
 import com.haxium.basicmod.doomsday.handler.*;
 import com.haxium.basicmod.doomsday.items.*;
 import com.haxium.basicmod.doomsday.tabs.*;

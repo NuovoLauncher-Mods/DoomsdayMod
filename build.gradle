@@ -5,6 +5,8 @@ if (project.hasProperty("projVersion")) {
   project.version = "1.0.0"
 }
 
+def root = System.getProperty("user.home") + "/Desktop/Programming/Java/DoomsdayMod"
+def data = System.getProperty("user.home") + "/Desktop/Programming/Java/DoomsdayMod/bin/data"
 
 buildscript {
     repositories {
@@ -28,8 +30,9 @@ buildscript {
 
 apply plugin: "forge"
 
+
 group= "com.haxium.basicmod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "obsidian_armor"
+archivesBaseName = "doomsday_mod"
 
 minecraft {
     version = "1.7.10-10.13.4.1614-1.7.10"
@@ -74,34 +77,38 @@ processResources
 
 //Custom tasks
 
+task updateJSON(type: Exec) {
+    def update_command_windows = ['bin/update-json.exe', project.version]
+    def update_command_linux = ['bin/update-json', project.version]
+    
+    if(System.getProperty('os.name') == "Windows" || "Windows 10") {
+        commandLine update_command_windows
+    } else {
+        commandLine update_command_linux
+    }
+}
 
 task copy(dependsOn: build, type: Copy) {
      from "build/libs"
      into System.getProperty('user.home') + "/.minecraft/mods"
-     include "obsidian_armor-$project.version*"
+     include "doomsday_mod-$project.version*"
+}
+
+task remove(dependsOn: build, type: Delete) {
+    delete fileTree(System.getProperty('user.home') + "/Desktop/Minecraft-Testing/mods") {
+        include '**/*.jar'
+        exclude "**/doomsday_mod-$project.version*"
+    }
 }
 
 task copy_test(dependsOn: build, type: Copy) {
     from "build/libs"
-    into System.getProperty('user.home') + "/Desktop/Minecraft Testing/mods"
-    include "obsidian_armor-$project.version*"
-}
-
-task copy_release(type: Copy) {
-    from "build/libs"
-    into System.getProperty('user.home') + "/Desktop/Programming/Java/ObsidianArmor-Releases"
-    include "obsidian_armor-$project.version*"
-}
-
-task update_release(type: Exec) {
-    def update_command = ['update-release', '--obsidian', project.version]
-    commandLine update_command
+    into System.getProperty('user.home') + "/Desktop/Minecraft-Testing/mods"
+    include "doomsday_mod-$project.version*"
 }
 
 //Copy the release and push to github
 
-copy_release.mustRunAfter copy 
-copy.finalizedBy copy_release
-
-update_release.mustRunAfter copy_release
-copy_release.finalizedBy update_release
+updateJSON.mustRunAfter copy_test
+copy_test.finalizedBy updateJSON
+updateJSON.finalizedBy remove
