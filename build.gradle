@@ -57,6 +57,8 @@ dependencies {
 
 processResources
 {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE //Ignore duplicate files
+    
     // this will ensure that this task is redone when the versions change.
     inputs.property "version", project.version
     inputs.property "mcversion", project.minecraft.version
@@ -90,7 +92,12 @@ task updateJSON(type: Exec) {
 
 task copy(dependsOn: build, type: Copy) {
      from "build/libs"
-     into System.getProperty('user.home') + "/.minecraft/mods"
+     if(System.getProperty('os.name') == "Windows" || "Windows 10") {
+         def path = System.getProperty('user.home') + "/AppData/Roaming/.minecraft/mods"
+     } else {
+         def path = System.getProperty('user.home') + "/.minecraft/mods"
+     }
+     into "$path"
      include "doomsday_mod-$project.version*"
 }
 
